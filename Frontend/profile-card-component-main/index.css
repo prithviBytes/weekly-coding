@@ -57,6 +57,7 @@ body {
     text-align: center;
     justify-content: space-around;
     margin-top: 25px;
+    border-top: 1px solid hsl(0, 4%, 86%);
 }
 .column .text-light {
     letter-spacing: 1px;
