@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+body {
+    background-image: linear-gradient(180deg,hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    user-select: none;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 500px;
+    border-radius: 25px;
+    background-color: hsl(240, 5%, 91%);
+    box-shadow: 0px 10px 40px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 10px 40px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 40px -1px rgba(0,0,0,0.75);
+}
+.image-container {
+    width: 50%;
+}
+.woman-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#woman {
+    position: absolute;
+    left: -17%;
+    top: 13%;
+    z-index: 20;
+}
+#shadow {
+    position: absolute;
+    bottom: -22%;
+    right: 15%;
+    z-index: 10;
+}
+#cube {
+    position: absolute;
+    top: 39%;
+    left: 8%;
+    z-index: 30;
+}
+.data-container {
+    width: 50%;
+    padding: 2rem 1rem;
+}
+.faq-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+    color: hsl(237, 12%, 33%);
+    border-bottom: 1px solid hsl(240, 21%, 79%);
+    padding: 1.2rem 0;
+}
+.question {
+    display: flex;
+    cursor: pointer;
+}
+.question img{
+    align-self: center;
+    height: 10px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.question:hover {
+    color: hsl(14, 88%, 65%);
+}
+.answer{
+    padding: 1rem 0;
+    padding-bottom: 0;
+    transition: all .3s;
+}
+.shown {
+   display: block;
+}
+.hidden {
+    display: none;
+}
+
+.answer.shown + .question{
+    font-weight: 700;
+}
+.answer.shown + .question img{
+    transform: rotate(180deg);
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        margin-top: 5rem;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .image-container {
+        height: 100px;
+        width: 100%;
+    }
+    .woman-container{
+        overflow: visible;
+    }
+    #woman{
+        top: -110%;
+        left: 10%;
+    }
+    #shadow {
+        bottom: 0%;
+        right: 18%;
+    }
+    #cube {
+        display: none;
+    }
+    .data-container{
+        padding-top: 0;
+        width: 100%;
+    }
+    .data-container h1 {
+        text-align: center;
+    }
+    .faq-container{
+        width: 100%;
+    }
+}
